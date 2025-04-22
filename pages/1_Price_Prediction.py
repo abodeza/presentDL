@@ -285,7 +285,8 @@ with st.form("prediction_form"):
             "Bluetooth": binary_feature_vector[5]
         }
 
-        prediction = requests.post("https://used-cars-f68c.onrender.com/predict", json=data).json()["prediction"]
+        URL_predict = st.secrets["my_secrets"]["URL_predict"]
+        prediction = requests.post(URL_predict, json=data).json()["prediction"]
         # prediction = requests.post("http://127.0.0.1:8000/predict", json=data).json()["prediction"]
 
         st.markdown(f"## Your prediction is: {prediction}")
