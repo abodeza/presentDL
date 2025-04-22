@@ -285,7 +285,7 @@ with st.form("prediction_form"):
             "Bluetooth": binary_feature_vector[5]
         }
 
-        URL_predict = st.secrets["my_secrets"]["URL_predict"]
+        URL_predict = st.secrets["URL_predict"]
         prediction = requests.post(URL_predict, json=data).json()["prediction"]
         # prediction = requests.post("http://127.0.0.1:8000/predict", json=data).json()["prediction"]
 
