@@ -1,5 +1,4 @@
 # 🚗 Used‑Car Price Prediction
-# *Please see the presentation branch for the implementation*
 Predict the resale price of a used car in the Gulf region from its basic specs and listing description.
 
 ---
